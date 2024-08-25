@@ -1,25 +1,56 @@
 {{/* Header */}}
 
-<div class="header">
+<!--<div class="header">-->
 
-    {{ if or (not (.Param "hideHeader")) .IsHome }}
+<!--    {{ if or (not (.Param "hideHeader")) .IsHome }}-->
 
-    <h1 class="header-title">{{ site.Title }}</h1>
+<!--    <h1 class="header-title">{{ site.Title }}</h1>-->
 
-    <div class="flex">
+<!--    <div class="flex">-->
+<!--        {{ $currentPage := . }}-->
+
+<!--        {{ with site.Params.menu }}-->
+<!--        {{ range . }}-->
+<!--        <p class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">-->
+<!--            <a href="{{.url}}">-->
+<!--                /{{.name }}-->
+<!--            </a>-->
+<!--        </p>-->
+<!--        {{ end }}-->
+<!--        {{ end }}-->
+<!--    </div>-->
+
+<!--    {{ end }}-->
+
+<!--</div>-->
+
+<div class="container pt-8 bg-white font-medium font-mono">
+    <div class="flex flex-row flex-wrap items-center pt-2">
+        <div class="basis-full pl-8 text-6xl text-left">
+            <h1 class="header"><a href="/">francoposa.io</a></h1>
+        </div>
+<!--        <div class="lg:basis-1/6 md:basis-0 basis-0 flex-auto text-xl text-center"></div>-->
+<!--        <div class="lg:basis-1/6 md:basis-1/6 basis-full text-xl text-center ">-->
+
+<!--            <a class='{{- if and (not .IsHome) (in .Permalink "projects") -}}text-decoration-underline{{- else -}}text-decoration-none{{- end -}}' href="/">projects</a>-->
+<!--        </div>-->
+<!--        <div class="lg:basis-1/6 md:basis-1/6 basis-full flex-auto text-xl text-center ">-->
+<!--            <a class='{{- if and (not .IsHome) (in .Permalink "resources") -}}text-decoration-underline{{- else -}}text-decoration-none{{- end -}}' href="/resources">resources</a>-->
+<!--        </div>-->
+<!--        <div class="lg:basis-1/6 md:basis-1/6 basis-full flex-auto text-xl text-center md:pr-4">-->
+<!--            <a class='{{- if and (not .IsHome) (in .Permalink "about") -}}text-decoration-underline{{- else -}}text-decoration-none{{- end -}}' href="/about">about</a>-->
+<!--        </div>-->
+    </div>
+    <div class="flex flex-row flex-wrap items-center pt-4">
+        <div class="flex flex-row flex-wrap  basis-full pl-8 text-md text-left">
         {{ $currentPage := . }}
-
         {{ with site.Params.menu }}
         {{ range . }}
-        <p class="small {{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
-            <a href="{{.url}}">
+            <a href="{{.url}}" class="{{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
                 /{{.name }}
             </a>
-        </p>
         {{ end }}
         {{ end }}
     </div>
-
-    {{ end }}
-
+    </div>
 </div>

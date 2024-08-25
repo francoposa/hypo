@@ -15,6 +15,12 @@ blockquote {
     border-left: .25em solid rgb(200,200,200);
 }
 
+h1.header {
+    @apply m-0;
+    @apply text-5xl;
+    @apply font-mono;
+}
+
 h1, h2, h3, h4, h5 {
     font-family: 'Work Sans', system-ui, sans-serif;
     @apply mt-6;

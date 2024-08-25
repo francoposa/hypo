@@ -12,21 +12,19 @@
   {{ $theme = .}}
   {{ end }}
 
-  <body class="{{ $theme }}">
+  <body class="max-w-4xl m-auto">
 
-    <div class="content">
-      <header>
-        {{ partial "header.html" . }}
-      </header>
+    <header>
+      {{ partial "header.html" . }}
+    </header>
 
-      <main class="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-    </div>
+    <main class="main">
+      {{ block "main" . }}{{ end }}
+    </main>
 
-    <footer>
-      {{ partial "footer.html" . }}
-    </footer>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
 
   </body>
 
