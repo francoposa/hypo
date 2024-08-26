@@ -21,10 +21,10 @@ h1.header {
     @apply font-mono;
 }
 
-h1, h2, h3, h4, h5 {
+.content h1, .content h2, .content h3, .content h4, .content h5 {
     font-family: 'Work Sans', system-ui, sans-serif;
-    @apply mt-6;
-    @apply mb-4;
+    @apply pt-4;
+    @apply pb-4;
 }
 
 h1 {
@@ -60,7 +60,7 @@ code {
 }
 
 .content ul {
-    @apply mb-4;
+    /*@apply mb-4;*/
     @apply pl-8;
     @apply list-disc;
 }

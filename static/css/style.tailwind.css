@@ -652,6 +652,10 @@ video {
   margin-right: 0.5rem;
 }
 
+.mt-0{
+  margin-top: 0px;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -666,10 +670,6 @@ video {
 
 .mt-8{
   margin-top: 2rem;
-}
-
-.mt-0{
-  margin-top: 0px;
 }
 
 .block{
@@ -694,6 +694,10 @@ video {
 
 .hidden{
   display: none;
+}
+
+.max-w-3xl{
+  max-width: 48rem;
 }
 
 .max-w-4xl{
@@ -762,9 +766,24 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.px-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.px-1{
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
+}
+
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-8{
@@ -772,14 +791,19 @@ video {
   padding-right: 2rem;
 }
 
+.py-2{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.py-3{
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .pb-4{
@@ -806,6 +830,14 @@ video {
   padding-left: 2rem;
 }
 
+.pr-1{
+  padding-right: 0.25rem;
+}
+
+.pr-2{
+  padding-right: 0.5rem;
+}
+
 .pr-4{
   padding-right: 1rem;
 }
@@ -820,6 +852,10 @@ video {
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-1{
+  padding-bottom: 0.25rem;
 }
 
 .text-left{
@@ -935,10 +971,10 @@ h1.header{
   font-family: Courier Prime, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-h1, h2, h3, h4, h5 {
+.content h1, .content h2, .content h3, .content h4, .content h5 {
   font-family: 'Work Sans', system-ui, sans-serif;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 h1{
@@ -976,8 +1012,8 @@ code {
   text-decoration-line: underline;
 }
 
-.content ul{
-  margin-bottom: 1rem;
+.content ul {
+  /*@apply mb-4;*/
   padding-left: 2rem;
   list-style-type: disc;
 }

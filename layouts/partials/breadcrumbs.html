@@ -1,9 +1,12 @@
 {{ if .Site.Params.breadcrumbs }}
-<div class="breadcrumbs">
-    {{ range .Ancestors.Reverse }}
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+<div class="container pl-2 pt-4 bg-white font-medium font-mono">
+    {{ $list := (.Ancestors.Reverse) }}
+    {{ $len := (len $list) }}
+    {{ range $index, $element := $list }}
+    <a href="{{ .RelPermalink }}">{{- lower .Title -}}</a>
+    {{ if ne (add $index 1) $len }}
     <span class="breadcrumbs-separator"> > </span>
     {{ end }}
-    <a class="breadcrumbs-current" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
 </div>
 {{ end }}

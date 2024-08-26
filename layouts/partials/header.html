@@ -26,7 +26,7 @@
 
 <div class="container pt-8 bg-white font-medium font-mono">
     <div class="flex flex-row flex-wrap items-center pt-2">
-        <div class="basis-full pl-8 text-6xl text-left">
+        <div class="basis-full pl-2 text-6xl text-left">
             <h1 class="header"><a href="/">francoposa.io</a></h1>
         </div>
 <!--        <div class="lg:basis-1/6 md:basis-0 basis-0 flex-auto text-xl text-center"></div>-->
@@ -42,13 +42,14 @@
 <!--        </div>-->
     </div>
     <div class="flex flex-row flex-wrap items-center pt-4">
-        <div class="flex flex-row flex-wrap  basis-full pl-8 text-md text-left">
+        <div class="flex flex-row flex-wrap  basis-full pl-2 text-md text-left">
         {{ $currentPage := . }}
         {{ with site.Params.menu }}
         {{ range . }}
-            <a href="{{.url}}" class="{{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
+            <span class="pr-2"><a href="{{.url}}" class="{{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
                 /{{.name }}
             </a>
+            </span>
         {{ end }}
         {{ end }}
     </div>
