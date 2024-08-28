@@ -645,6 +645,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-0{
+  margin-bottom: 0px;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -845,6 +849,11 @@ video {
   padding-bottom: 0px;
 }
 
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-2{
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -928,6 +937,10 @@ video {
   padding-top: 0.5rem;
 }
 
+.pt-3{
+  padding-top: 0.75rem;
+}
+
 .pt-4{
   padding-top: 1rem;
 }
@@ -997,6 +1010,11 @@ video {
   line-height: 1.75rem;
 }
 
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-light{
   font-weight: 300;
 }
@@ -1061,11 +1079,6 @@ header h1{
 
 header h1{
   font-family: Courier Prime, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
-
-.breadcrumbs {
-  font-family: 'Work Sans', system-ui, sans-serif;
-  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5 {
@@ -1148,6 +1161,11 @@ code {
   .md\:px-12{
     padding-left: 3rem;
     padding-right: 3rem;
+  }
+
+  .md\:px-8{
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .md\:pr-4{

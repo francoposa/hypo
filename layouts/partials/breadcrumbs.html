@@ -1,5 +1,5 @@
 {{ if .Site.Params.breadcrumbs }}
-<div class="container breadcrumbs pt-12 px-4 pb-0 md:px-12 bg-white text-sm">
+<div class="container breadcrumbs pt-4 px-4 pb-0 md:px-12 text-sm font-mono">
     <div class="flex flex-row flex-wrap items-center">
     {{ $list := (.Ancestors.Reverse) }}
     {{ $len := (len $list) }}
