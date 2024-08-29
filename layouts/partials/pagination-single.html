@@ -1,39 +1,42 @@
-{{ if or .NextInSection .PrevInSection }}
-
 <div class="single-pagination">
     <hr />
 
     <div class="flex">
 
-        <div class="single-pagination-prev">
-            {{ with .PrevInSection }}
-            <div class="single-pagination-container-prev">
-                <div class="single-pagination-text">←</div>
-                <div class="single-pagination-text">
-                    <a href="{{ .RelPermalink }}">
-                        {{ .Title }}
-                    </a>
+        {{ $currentPage := . }}
+        {{ $list := .CurrentSection.Pages }}
+        {{ $len := (len $list) }}
+        {{ range $index, $element := $list }}
+            {{ if (eq $element $currentPage) }}
+                {{ if ne $index 0 }}
+                    {{ $prevPage := (index $list (sub $index 1)) }}
+                    <div class="single-pagination-next w-1/2">
+                        <div class="single-pagination-container-next">
+                            <div class="single-pagination-text">
+                                <a href="{{ $prevPage.RelPermalink }}">
+                                    {{ $prevPage.Title }}
+                                </a>
+                            </div>
+                            <div class="single-pagination-text">→</div>
+                        </div>
+                    </div>
+                {{ end }}
+                {{ if ne (add $index 2) $len }}
+                {{ $nextPage := (index $list (add $index 2)) }}
+                <div class="single-pagination-next  w-1/2">
+                    <div class="single-pagination-container-next">
+                        <div class="single-pagination-text">
+                            <a href="{{ $nextPage.RelPermalink }}">
+                                {{ $nextPage.Title }}
+                            </a>
+                        </div>
+                        <div class="single-pagination-text">→</div>
+                    </div>
                 </div>
-            </div>
-            {{ end }}
+                {{ end }}
+        {{ end }}
+        {{ end }}
+
         </div>
-
-        <div class="single-pagination-next">
-            {{ with .NextInSection }}
-            <div class="single-pagination-container-next">
-                <div class="single-pagination-text">
-                    <a href="{{ .RelPermalink }}">
-                        {{ .Title }}
-                    </a>
-                </div>
-                <div class="single-pagination-text">→</div>
-            </div>
-            {{ end }}
-        </div>
-
-    </div>
-
     <hr />
 </div>
-
-{{ end }}
