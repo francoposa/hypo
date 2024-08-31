@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}"
-  dir="{{ or site.Language.LanguageDirection `ltr` }}">
+  dir="auto">
 
   <head>
     {{ partial "head.html" . }}
@@ -12,12 +12,12 @@
   {{ $theme = .}}
   {{ end }}
 
-  <body class="max-w-4xl m-auto">
+  <body class="max-w-3xl m-auto">
 
     <header>
       {{ partial "header.html" . }}
     </header>
-    <div class="container content px-4 md:px-12 pt-0">
+    <div class="container content px-8 md:px-8 pt-0">
     <hr>
     </div>
     <main class="main">

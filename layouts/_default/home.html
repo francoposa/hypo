@@ -1,9 +1,9 @@
 {{ define "main" }}
-<div class="container px-4 md:px-12 py-4 bg-white">
-    <h1 class="py-4"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+<div class="container px-8 md:px-8 py-4 bg-white">
+<!--    <h1 class="py-4 text-4xl"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>-->
 <!--    <hr>-->
     {{ range sort .Sections ".Params.order_number" }}
-    <h2 class="header py-4 text-3xl">
+    <h2 class="header py-4 text-4xl">
         <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
     <hr>
@@ -11,10 +11,10 @@
     <h3 class="header pt-4 pb-2 text-2xl">
         <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h3>
-    <ul class="list-disc px-4 md:px-8">
+    <ul class="list-disc px-8 md:px-8">
         {{ range sort .Pages ".Params.order_number"}}
         <li>
-            <h4 class="py-1 font-normal"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <h4 class="py-1 text-lg font-normal"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
         </li>
         {{ end }}
     </ul>

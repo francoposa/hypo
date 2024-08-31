@@ -10,15 +10,15 @@ a:hover {
 
 blockquote {
     @apply mb-4;
-    @apply px-4;
+    @apply px-8;
     color: rgb(115,115,115);
     border-left: .25em solid rgb(200,200,200);
 }
 
 header h1 {
     @apply m-0;
-    @apply text-2xl;
-    @apply md:text-4xl;
+    @apply text-3xl;
+    @apply md:text-6xl;
     @apply font-mono;
 }
 
