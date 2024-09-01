@@ -18,7 +18,7 @@ blockquote {
 header h1 {
     @apply m-0;
     @apply text-3xl;
-    @apply md:text-6xl;
+    @apply md:text-5xl;
     @apply font-mono;
 }
 
@@ -55,6 +55,9 @@ code {
     background-color: rgb(240, 240, 240);
 }
 
+.content h1, h2, h3, h4, h5, h6, p, blockquote, pre  {
+    @apply overflow-auto;
+}
 .content p {
     @apply mb-4;
 }
