@@ -14,7 +14,7 @@
     <ul class="list-disc px-8 md:px-8">
         {{ range sort .Pages ".Params.order_number"}}
         <li>
-            <h4 class="py-1 text-lg font-normal"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+            <h4 class="py-1 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
         </li>
         {{ end }}
     </ul>

@@ -43,19 +43,19 @@ h3 {
     @apply text-2xl;
 }
 
-:is(h1,h2,h3) {
-    @apply font-medium;
-}
-
-:is(h4,h5) {
-    @apply font-semibold;
-}
-
 code {
     background-color: rgb(240, 240, 240);
 }
 
-.content h1, h2, h3, h4, h5, h6, p, blockquote, pre  {
+.content h1, h2, h3 {
+    @apply font-medium
+}
+
+.content h4, h5, h6 {
+    @apply font-semibold
+}
+
+.content  p, blockquote, pre  {
     @apply overflow-auto;
 }
 .content p {
