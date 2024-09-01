@@ -1,10 +1,10 @@
 {{ if .Site.Params.breadcrumbs }}
-<div class="container breadcrumbs pt-6 px-8 md:px-8 pb-0 text-sm font-mono">
+<div class="container breadcrumbs pt-8 px-8 md:px-8 pb-0 text-sm">
     <div class="flex flex-row flex-wrap items-center">
     {{ $list := (.Ancestors.Reverse) }}
     {{ $len := (len $list) }}
     {{ range $index, $element := $list }}
-        <span class="px-1"><a href="{{ .RelPermalink }}">{{- lower .Title -}}</a></span>
+        <span class="px-1"><a href="{{ .RelPermalink }}">{{- .Title -}}</a></span>
     {{ if ne (add $index 1) $len }}
         <span class="breadcrumbs-separator"> > </span>
 
