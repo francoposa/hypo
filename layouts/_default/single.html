@@ -2,7 +2,7 @@
 
 {{ partial "breadcrumbs.html" . }}
 
-<div class="container content px-8 md:px-8 py-0 bg-white">
+<div class="content container px-8 md:px-8 py-0 bg-white">
 
 
   {{ if .Param "showTags" }}
@@ -24,8 +24,6 @@
   {{ end }}
 
 
-
-
   {{/* Page content */}}
 
     <h1 class="">{{ .Title }}</h1>
@@ -35,9 +33,9 @@
     {{ .Content }}
   {{/* Next prev controls */}}
 
-<!--  {{ if not (.Param "hidePagination") }}-->
-<!--  {{ partial "pagination-single.html" . }}-->
-<!--  {{ end }}-->
+  {{ if not (.Param "hidePagination") }}
+  {{ partial "pagination-single.html" . }}
+  {{ end }}
 </div>
 
 {{ end }}

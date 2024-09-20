@@ -93,3 +93,14 @@ code {
     @apply whitespace-pre-wrap;
     @apply text-sm;
 }
+
+.single-pagination {
+    font-family: 'Work Sans', system-ui, sans-serif;
+}
+
+.single-pagination a {
+    @apply no-underline;
+}
+.single-pagination a:hover {
+    @apply underline;
+}
