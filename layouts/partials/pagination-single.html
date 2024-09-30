@@ -2,36 +2,29 @@
 {{ $pagesInSubsection := .Parent.Pages.ByWeight }}
 
 {{ $pageIndex := -1 }}
+
 {{ range $i, $p := $pagesInSubsection }}
 {{ if eq $p $currentPage }}
 {{ $pageIndex = $i }}
 {{ end }}
 {{ end }}
 
-{{ $prevPageExists := ge $pageIndex 1 }}
-{{ $nextPageExists := lt $pageIndex (sub (len $pagesInSubsection) 1) }}
 
-{{ if or $prevPageExists $nextPageExists }}
 <hr class="mt-8">
 <div class="container single-pagination flex flex-row flex-wrap py-4">
 
     <div class="basis-1/2 pr-2">
-        {{ if $prevPageExists }}
-            {{ $prevPage := index $pagesInSubsection (sub $pageIndex 1) }}
-            <a href="{{ $prevPage.RelPermalink }}">
-                <b>Previous:</b> {{ $prevPage.Title | truncate 64 }}
-            </a>
+
+        {{ if ge $pageIndex 1 }}
+        {{ $prevPage := index $pagesInSubsection (sub $pageIndex 1) }}
+        <a href="{{ $prevPage.RelPermalink }}"><b>Previous:</b> {{ $prevPage.Title | truncate 64 }}</a>
         {{ end }}
     </div>
 
     <div class="basis-1/2 pl-2">
-        {{ if $nextPageExists }}
-            {{ $nextPage := index $pagesInSubsection (add $pageIndex 1) }}
-            <a href="{{ $nextPage.RelPermalink }}">
-                <b>Next:</b> {{ $nextPage.Title | truncate 64 }}
-            </a>
+        {{ if lt $pageIndex (sub (len $pagesInSubsection) 1) }}
+        {{ $nextPage := index $pagesInSubsection (add $pageIndex 1) }}
+        <a href="{{ $nextPage.RelPermalink }}"><b>Next:</b> {{ $nextPage.Title | truncate 64 }}</a>
         {{ end }}
     </div>
-
 </div>
-{{ end }}
