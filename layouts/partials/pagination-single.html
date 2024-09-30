@@ -3,9 +3,9 @@
 
 {{ $pageIndex := -1 }}
 {{ range $i, $p := $pagesInSubsection }}
-{{ if eq $p $currentPage }}
-{{ $pageIndex = $i }}
-{{ end }}
+    {{ if eq $p $currentPage }}
+        {{ $pageIndex = $i }}
+    {{ end }}
 {{ end }}
 
 {{ $prevPageExists := ge $pageIndex 1 }}
