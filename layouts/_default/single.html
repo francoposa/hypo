@@ -25,12 +25,13 @@
 
 
   {{/* Page content */}}
-
+    <div class="content">
     <h1 class="">{{ .Title }}</h1>
     <p class="mt-2 mb-1  text-xl">{{ .Page.Summary }}</p>
     <p class="mt-2 mb-1  text-md">{{ .Site.Params.AuthorName }}</p>
-  <hr>
+    <hr>
     {{ .Content }}
+    </div>
   {{/* Next prev controls */}}
 
   {{ if not (.Param "hidePagination") }}

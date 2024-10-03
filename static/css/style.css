@@ -31,11 +31,6 @@ h1, h2, h3, h4, h5 {
     font-family: 'Work Sans', system-ui, sans-serif;
 }
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-    @apply pt-4;
-    @apply pb-2;
-}
-
 h1 {
     @apply text-4xl;
 }
@@ -48,15 +43,28 @@ h3 {
     @apply text-2xl;
 }
 
+.home-list h1, .home-list h2, .home-list h3, .home-list h4, .home-list h5, .home-list h6 {
+    @apply font-medium
+}
+
+.list-list h1, .list-list h2, .list-list h3, .list-list h4, .list-list h5, .list-list h6 {
+    @apply font-medium
+}
+
 code {
     background-color: rgb(240, 240, 240);
 }
 
-.content h1, h2, h3 {
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+    @apply pt-4;
+    @apply pb-2;
+}
+
+.content h1, .content h2, .content h3 {
     @apply font-medium
 }
 
-.content h4, h5, h6 {
+.content h4, .content h5, .content h6 {
     @apply font-semibold
 }
 
