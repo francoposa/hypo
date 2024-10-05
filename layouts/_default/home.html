@@ -1,14 +1,12 @@
 {{ define "main" }}
 <div class="home-list container px-8 md:px-8 py-4 bg-white">
-<!--    <h1 class="py-4 text-4xl"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>-->
-<!--    <hr>-->
     {{ range sort .Sections ".Params.weight" }}
-    <h2 class="header py-4 text-4xl">
+    <h2 class="header py-4">
         <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
     <hr>
     {{ range sort .Sections ".Params.weight" }}
-    <h3 class="header pt-4 pb-2 text-2xl">
+    <h3 class="header pt-6 pb-2">
         <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h3>
     <ul class="list-disc px-8 md:px-8">
