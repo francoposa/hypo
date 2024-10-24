@@ -1,4 +1,4 @@
-{{ if .Site.Params.breadcrumbs }}
+{{ if and (.Site.Params.breadcrumbs) (gt (len .Ancestors) 1)  }}
 <div class="container breadcrumbs pt-8 px-8 md:px-8 pb-0 text-sm">
     <div class="flex flex-row flex-wrap items-center">
     {{ $list := (.Ancestors.Reverse) }}

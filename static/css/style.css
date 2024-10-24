@@ -47,6 +47,10 @@ h3 {
     @apply font-medium
 }
 
+.list-title h1, .list-title h2, .list-title h3, .list-title h4, .list-title h5, .list-title h6 {
+    @apply font-medium
+}
+
 .list-list h1, .list-list h2, .list-list h3, .list-list h4, .list-list h5, .list-list h6 {
     @apply font-medium
 }
