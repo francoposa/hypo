@@ -1,41 +1,40 @@
 {{ define "main" }}
-{{ partial "breadcrumbs.html" . }}
-
+    {{ partial "breadcrumbs.html" . }}
     <div class="list-title container px-8 md:px-8 py-2 bg-white">
-    <h1 class="py-2"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
-</div>
-{{ if  .Content }}
-<div class="list-content container px-8 md:px-8 py-2 bg-white content">
-    {{ .Content }}
-</div>
-{{ end }}
-<div class="list-list container px-8 md:px-8 pb-4 bg-white">
-    {{ if .Sections }}
-    <!-- This is a list page for a Section containing Sections -->
-    <hr>
-    {{ range sort .Sections ".Params.weight" }}
-    <h2 class="pt-6 pb-2"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <ul class="list-disc px-8 md:px-8">
-        {{ range sort .Pages ".Params.weight"}}
-        <li>
-            <h3 class="pt-2 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p class="text-sm font-light italic">{{ .Summary }}</p>
-        </li>
-        {{ end }}
-    </ul>
+        <h1 class="py-2"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+    </div>
+    {{ if  .Content }}
+        <div class="list-content container px-8 md:px-8 py-2 bg-white content">
+            {{ .Content }}
+        </div>
     {{ end }}
-    {{ else if .Pages }}
-    <!-- This is a list page for a Section containing only Pages -->
-    <hr>
-        <h2 class="pt-6 pb-2">Posts</h2>
-        <ul class="list-disc px-8 md:px-8">
-        {{ range sort .Pages ".Params.weight"}}
-        <li>
-            <h3 class="pt-2 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            <p class="px-0 text-sm font-light italic">{{ .Summary }}</p>
-        </li>
+    <div class="list-list container px-8 md:px-8 pb-4 bg-white">
+        {{ if .Sections }}
+            <!-- This is a list page for a Section containing Sections -->
+            <hr>
+            {{ range sort .Sections ".Params.weight" }}
+                <h2 class="pt-6 pb-2"><a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+                <ul class="list-disc px-8 md:px-8">
+                    {{ range sort .Pages ".Params.weight"}}
+                        <li>
+                            <h3 class="pt-2 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                            <p class="text-sm font-light italic">{{ .Summary }}</p>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ end }}
+        {{ else if .Pages }}
+            <!-- This is a list page for a Section containing only Pages -->
+            <hr>
+            <h2 class="pt-6 pb-2">Posts</h2>
+            <ul class="list-disc px-8 md:px-8">
+                {{ range sort .Pages ".Params.weight"}}
+                    <li>
+                        <h3 class="pt-2 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                        <p class="px-0 text-sm font-light italic">{{ .Summary }}</p>
+                    </li>
+                {{ end }}
+            </ul>
         {{ end }}
-    </ul>
-    {{ end }}
-</div>
+    </div>
 {{ end }}
