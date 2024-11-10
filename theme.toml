@@ -1,36 +1,12 @@
 name = 'Typo'
 license = 'MIT'
-licenselink = 'https://github.com/tomfran/typo/blob/main/LICENSE'
-description = 'A simple Hugo theme'
+licenselink = 'https://github.com/francoposa/hypo/blob/main/LICENSE'
+description = 'A simple Hugo theme - like Typo but with even less'
 
-homepage = 'https://github.com/tomfran/typo'
+homepage = 'https://github.com/francoposa/francoposa.io'
 
-demosite = 'https://tomfran.github.io/'
-
-tags = [
-    "responsive",
-    "simple",
-    "clean",
-    "light",
-    "dark",
-    "blog",
-    "minimal",
-    "personal",
-    "portfolio",
-]
-
-features = [
-    "responsive",
-    "blog",
-    "table-of-contents",
-    "highlight.js",
-    "favicon",
-    "social-icons",
-    "minified-assets",
-    "dark-light-images",
-    "color-palettes",
-]
+demosite = 'https://francoposa.io/'
 
 [author]
-name = 'Francesco Tomaselli'
-homepage = 'https://tomfran.github.io/'
+name = 'Franco Posa'
+homepage = 'https://francoposa.io/'
