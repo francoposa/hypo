@@ -1,23 +1,26 @@
 {{ define "main" }}
-<div class="home-list container px-8 md:px-8 py-4 bg-white">
-    {{ range sort .Sections ".Params.weight" }}
-    <h2 class="header py-4">
-        <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </h2>
-    <hr>
-    {{ range sort .Sections ".Params.weight" }}
-    <h3 class="header pt-6 pb-2">
-        <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </h3>
-    <ul class="list-disc px-8 md:px-8">
-        {{ range sort .Pages ".Params.weight"}}
-        <li>
-            <h4 class="py-1 text-lg"><a class="" href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
-            <p class="text-sm font-light italic">{{ .Summary }}</p>
-        </li>
+    {{ partial "list-header.html" . }}
+    <div class="home-list container px-8 md:px-8 py-4 bg-white">
+        {{ range sort .Sections ".Params.weight" }}
+            <h2 class="header py-4">
+                <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            <hr>
+            {{ range sort .Sections ".Params.weight" }}
+                <h3 class="header pt-6 pb-2">
+                    <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                <ul class="list-disc px-8 md:px-8">
+                    {{ range sort .Pages ".Params.weight"}}
+                        <li>
+                            <h4 class="py-1 text-lg">
+                                <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h4>
+                            <p class="text-sm font-light italic">{{ .Summary }}</p>
+                        </li>
+                    {{ end }}
+                </ul>
+            {{ end }}
         {{ end }}
-    </ul>
-    {{ end }}
-    {{ end }}
-</div>
+    </div>
 {{ end }}

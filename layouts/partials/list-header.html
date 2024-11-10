@@ -1,0 +1,15 @@
+<div class="content container px-8 md:px-8 pt-6 pb-2 bg-white">
+    <h1 class="">{{ .Title }}</h1>
+    {{ if .Page.Summary }}
+        <p class="mt-2 mb-1 text-xl">{{ .Page.Summary }}</p>
+    {{ end }}
+    {{ if .Page.Description }}
+        <p class="mt-2 mb-1 italic">{{ .Page.Description }}</p>
+    {{ end }}
+    {{ if .Page.Params.AuthorName }}
+        <p class="mt-2 mb-1 text-md font-medium">{{ .Page.Params.AuthorName }}</p>
+    {{ end }}
+</div>
+<div class="content container px-8 md:px-8  bg-white">
+    <hr>
+</div>
