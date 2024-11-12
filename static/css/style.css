@@ -43,15 +43,25 @@ h3 {
     @apply text-2xl;
 }
 
-.home-list h1, .home-list h2, .home-list h3, .home-list h4, .home-list h5, .home-list h6 {
+.list-header {
+    @apply pt-8;
+    @apply pb-2;
+}
+
+.list-list-sections-header {
+    @apply pt-8;
+    @apply pb-2;
     @apply font-medium
 }
 
-.list-title h1, .list-title h2, .list-title h3, .list-title h4, .list-title h5, .list-title h6 {
-    @apply font-medium
-}
-
-.list-list h1, .list-list h2, .list-list h3, .list-list h4, .list-list h5, .list-list h6 {
+.list-list-sections-list h1,
+.list-list-sections-list h2,
+.list-list-sections-list h3,
+.list-list-sections-list h4,
+.list-list-sections-list h5,
+.list-list-sections-list h6 {
+    @apply pt-2;
+    @apply pb-1;
     @apply font-medium
 }
 
