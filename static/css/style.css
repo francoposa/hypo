@@ -82,11 +82,11 @@ code {
     @apply font-semibold
 }
 
-.content  p, blockquote, pre  {
+.content p, .content blockquote, .content pre  {
     @apply overflow-auto;
 }
 .content p {
-    @apply mb-4;
+    @apply pb-4;
 }
 
 .content a {
@@ -94,7 +94,7 @@ code {
 }
 
 .content ul {
-    /*@apply mb-4;*/
+    @apply pb-4;
     @apply pl-8;
     @apply list-disc;
 }
@@ -112,7 +112,7 @@ code {
 .content pre {
     @apply mb-4;
     @apply p-4;
-    @apply whitespace-pre-wrap;
+    /*@apply whitespace-pre-wrap;*/
     @apply text-sm;
 }
 

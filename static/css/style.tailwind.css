@@ -1197,20 +1197,20 @@ code {
   font-weight: 600;
 }
 
-.content  p, blockquote, pre{
+.content p, .content blockquote, .content pre{
   overflow: auto;
 }
 
 .content p{
-  margin-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .content a{
   text-decoration-line: underline;
 }
 
-.content ul {
-  /*@apply mb-4;*/
+.content ul{
+  padding-bottom: 1rem;
   padding-left: 2rem;
   list-style-type: disc;
 }
@@ -1228,7 +1228,7 @@ code {
 .content pre{
   margin-bottom: 1rem;
   padding: 1rem;
-  white-space: pre-wrap;
+  /*@apply whitespace-pre-wrap;*/
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
