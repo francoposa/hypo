@@ -28,17 +28,21 @@
 
         {{ else if .Pages }}
             <!-- This is a list page for a leaf Section containing only Pages -->
-            <h2>Posts</h2>
-            <ul class="list-disc px-8 md:px-8">
-                {{ range sort .Pages ".Params.weight"}}
-                    <li>
-                        <h3 class="text-lg">
-                            <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
-                        </h3>
-                        <p class="px-0 text-sm font-light italic">{{ .Summary }}</p>
-                    </li>
-                {{ end }}
-            </ul>
+            <div class="list-list-sections-header">
+                <h2>Posts</h2>
+            </div>
+            <div class="list-list-sections-list">
+                <ul class="list-disc px-8 md:px-8">
+                    {{ range sort .Pages ".Params.weight"}}
+                        <li>
+                            <h3 class="text-lg">
+                                <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            </h3>
+                            <p class="px-0 text-sm font-light italic">{{ .Summary }}</p>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
         {{ end }}
     </div>
 {{ end }}
