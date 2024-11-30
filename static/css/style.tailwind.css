@@ -1106,6 +1106,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.list-lower-roman {
+  list-style-type: lower-roman;
+}
+
 a:hover{
   text-decoration-line: underline;
 }
@@ -1220,9 +1224,16 @@ code {
 }
 
 .content ol{
-  margin-bottom: 1rem;
   padding-left: 2rem;
+}
+
+.content > ol{
   list-style-type: decimal;
+  margin-bottom: 1rem;
+}
+
+.content > ol > li > ol {
+  list-style-type: lower-roman;
 }
 
 .content pre{
