@@ -19,8 +19,3 @@
 <link rel="canonical" href="{{ .Permalink }}" />
 
 {{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
-
-{{ if hugo.IsProduction }}
-{{ template "_internal/google_analytics.html" . }}
-{{ end }}

@@ -2,34 +2,40 @@
 
 {{ partial "breadcrumbs.html" . }}
 
-<div class="content container px-8 md:px-8 py-0 bg-white">
+<div class="container px-8 md:px-8 py-0 bg-white">
 
-
-  {{ if .Param "showTags" }}
-    {{ $taxonomy := "tags" }}
-    {{ with .Param $taxonomy }}
-      <div class="single-tags">
-        {{ range $index, $tag := . }}
-          {{ with $.Site.GetPage (printf "/%s/%s" $taxonomy $tag) -}}
-            <span>
+  <div class="single-header mt-2">
+  <h1 class="">{{ .Title }}</h1>
+  <p class="mt-2 mb-0 text-xl">{{ .Page.Summary }}</p>
+  <p class="mt-2 mb-0 italic">{{ .Page.Description }}</p>
+  {{ if .Params.tags }}
+    <div class="single-tags mt-2 mb-0">
+      {{ range $index, $tag := .Params.tags }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $tag) -}}
+          <span class="p-0.5 mr-1 text-xs bg-neutral-200 " >
               <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
             </span>
-          {{ end }}
         {{ end }}
-      </div>
-    {{ end }}
+      {{ end }}
+    </div>
   {{ end }}
 
-  <div class="content">
-  <h1 class="">{{ .Title }}</h1>
-  <p class="mt-2 mb-1 text-xl">{{ .Page.Summary }}</p>
-  <p class="mt-2 mb-1 italic">{{ .Page.Description }}</p>
-  <p class="mt-2 mb-1 text-md font-medium">{{ .Site.Params.AuthorName }}</p>
-  <p class="mt-2 mb-1 text-xs">
+  <p>---</p>
+  <p class="mt-0 mb-0 text-md font-medium">{{ .Site.Params.AuthorName }}</p>
+  <p class="mt-2 mb-4 text-sm">
     Published {{ .Page.Date.Format "2006-01-02" }} &#183;
     Updated {{ .Page.Lastmod.Format "2006-01-02" }}
   </p>
-  <hr>
+
+  <hr class="mb-4">
+
+  </div>
+
+{{/*  <div class="content table-of-contents">*/}}
+{{/*    {{ .TableOfContents }}*/}}
+{{/*  </div>*/}}
+
+  <div class="content">
   {{ .Content }}
   </div>
   {{/* Next prev controls */}}
