@@ -2,7 +2,7 @@
     {{ $homeSection := . }}
     {{ $pageIndex := -1 }}
     {{ range sort .Sections ".Params.weight" }}
-        {{ if eq (lower .Title) (lower .Site.Params.homeSectionTitle) }}
+        {{ if eq (lower .Title) (lower .Site.Params.homeCollectionTitle) }}
             {{ $homeSection = . }}
         {{ end }}
     {{ end }}

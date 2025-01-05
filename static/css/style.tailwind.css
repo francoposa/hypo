@@ -1263,6 +1263,14 @@ h3{
   font-weight: 600;
 }
 
+#TableOfContents a{
+  text-decoration-line: none;
+}
+
+#TableOfContents a:hover{
+  text-decoration-line: underline;
+}
+
 .content h1, .content h2, .content h3, .content h4, .content h5, .content h6{
   padding-top: 1rem;
   padding-bottom: 0.5rem;
