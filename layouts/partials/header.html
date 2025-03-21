@@ -9,7 +9,7 @@
         {{ $currentPage := . }}
         {{ with site.Params.menu }}
         {{ range . }}
-            <span class="px-1"><a href="{{.url}}" class="{{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
+            <span class="px-1 text-base md:text-lg"><a href="{{.url}}" class="{{ if eq .name (lower $currentPage.Name) }} bold {{end}}">
                 /{{.name }}
             </a>
             </span>

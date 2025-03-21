@@ -1075,6 +1075,11 @@ video {
   line-height: 1;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1093,6 +1098,10 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-extralight{
+  font-weight: 200;
 }
 
 .font-light{
@@ -1234,7 +1243,7 @@ h3{
 }
 
 .list-list-sections-header{
-  padding-top: 2rem;
+  padding-top: 1.5rem;
   padding-bottom: 0.5rem;
   font-weight: 500;
 }
@@ -1244,10 +1253,15 @@ h3{
 .list-list-sections-list h3,
 .list-list-sections-list h4,
 .list-list-sections-list h5,
-.list-list-sections-list h6{
-  padding-top: 0.5rem;
+.list-list-sections-list h6 {
+  /*@apply pt-2;*/
+  /*@apply pb-1;*/
+  font-weight: 500
+}
+
+.list-list-sections-list > ul > li{
+  padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  font-weight: 500;
 }
 
 .single-header h1, .single-header h2, .single-header h3, .single-headerh4, .single-header h5, .single-header h6{
@@ -1344,26 +1358,13 @@ h3{
 }
 
 @media (min-width: 768px){
-  .md\:basis-0{
-    flex-basis: 0px;
-  }
-
-  .md\:basis-1\/6{
-    flex-basis: 16.666667%;
-  }
-
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  .md\:pr-4{
-    padding-right: 1rem;
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:basis-1\/6{
-    flex-basis: 16.666667%;
+  .md\:text-lg{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
