@@ -1,25 +1,25 @@
 {{ define "main" }}
     {{ partial "breadcrumbs.html" . }}
-    <div class="px-8 md:px-8">
+    <div class="list">
     {{ partial "list-header.html" . }}
     </div>
-    <div class="list-list px-8 md:px-8">
+    <div class="list list-list">
         {{ if .Sections }}
             <!-- This is a list page for a Section containing further Sections -->
             {{ range sort .Sections ".Params.weight" }}
                 <div class="list-list-sections-header">
                 <h2>
-                    <a class="text-decoration-none" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h2>
                 </div>
                 <div class="list-list-sections-list">
-                <ul class="list-disc px-8 md:px-8">
+                <ul class="list-ul">
                     {{ range sort .Pages ".Params.weight"}}
                         <li>
-                            <h3 class="text-lg">
-                                <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            <h3>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                             </h3>
-                            <p class="text-sm font-light italic">{{ .Summary }}</p>
+                            <p class="list-item-summary">{{ .Summary }}</p>
                         </li>
                     {{ end }}
                 </ul>
@@ -32,13 +32,13 @@
                 <h2>Posts</h2>
             </div>
             <div class="list-list-sections-list">
-                <ul class="list-disc px-8 md:px-8">
+                <ul class="list-ul">
                     {{ range sort .Pages ".Params.weight"}}
                         <li>
-                            <h3 class="text-lg">
-                                <a class="" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                            <h3>
+                                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                             </h3>
-                            <p class="px-0 text-sm font-light italic">{{ .Summary }}</p>
+                            <p class="list-item-summary">{{ .Summary }}</p>
                         </li>
                     {{ end }}
                 </ul>

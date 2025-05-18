@@ -1237,6 +1237,18 @@ h3{
   line-height: 2rem;
 }
 
+.list{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 768px){
+  .list{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .list-header{
   padding-top: 2rem;
   padding-bottom: 0.5rem;
@@ -1256,12 +1268,37 @@ h3{
 .list-list-sections-list h6 {
   /*@apply pt-2;*/
   /*@apply pb-1;*/
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 500
+}
+
+.list-ul{
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 768px){
+  .list-ul{
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+.list-ul{
+  list-style-type: disc;
 }
 
 .list-list-sections-list > ul > li{
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.list-item-summary{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 300;
+  font-style: italic;
 }
 
 .single-header h1, .single-header h2, .single-header h3, .single-headerh4, .single-header h5, .single-header h6{

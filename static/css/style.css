@@ -43,6 +43,11 @@ h3 {
     @apply text-2xl;
 }
 
+.list {
+    @apply px-8;
+    @apply md:px-8;
+}
+
 .list-header {
     @apply pt-8;
     @apply pb-2;
@@ -62,12 +67,25 @@ h3 {
 .list-list-sections-list h6 {
     /*@apply pt-2;*/
     /*@apply pb-1;*/
+    @apply text-lg;
     @apply font-medium
+}
+
+.list-ul {
+    @apply px-8;
+    @apply md:px-8;
+    @apply list-disc;
 }
 
 .list-list-sections-list > ul > li {
     @apply pt-1;
     @apply pb-1;
+}
+
+.list-item-summary {
+    @apply text-sm;
+    @apply font-light;
+    @apply italic;
 }
 
 .single-header h1, .single-header h2, .single-header h3, .single-headerh4, .single-header h5, .single-header h6 {
